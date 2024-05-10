@@ -79,4 +79,4 @@ List of third-party libraries and frameworks used in the project:
 - **simplebar**: Plugin for customizing scrollbars.
 
 
-![Screenshot](https://github.com/ssenick/greenshop/blob/main/family-doctor.png)
+![Screenshot](https://github.com/ssenick/family-doctor/blob/master/family-doctor.png)
