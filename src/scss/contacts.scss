@@ -1,0 +1,199 @@
+.contacts {
+	position: relative;
+	@include adaptiveValue("margin-top", -90, -60);
+	@media (max-width: $tablet) {
+		display: flex;
+		flex-direction: column-reverse;
+		background-color: $c4;
+	}
+	// .contacts__map
+	&__map {
+		position: absolute !important;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@media (max-width: $tablet) {
+			position: relative !important;
+			padding: 0px 0px 70% 0px;
+		}
+	}
+	&__body-map{
+		
+	}
+	// .contacts__markers
+	&__markers {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__body
+	&__body {
+		position: relative;
+		padding: 30px 60px;
+		margin: 30px 0px 30px 10px;
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+		border-radius: 20px;
+		overflow: hidden;
+		max-width: 538px;
+		color: #fff;
+		@include adaptiveValue("margin-left", 10, 0, 1920, 1024, 1);
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $c1;
+			opacity: 0.8;
+		}
+		> * {
+			position: relative;
+			z-index: 2;
+		}
+		@media (max-width: $tablet) {
+			max-width: none;
+			@include adaptiveValue("padding-right", 60, 15, 768, 320, 1);
+			@include adaptiveValue("padding-left", 60, 15, 768, 320, 1);
+			@include adaptiveValue("padding-top", 30, 15, 768, 320, 1);
+			@include adaptiveValue("padding-bottom", 30, 15, 768, 320, 1);
+		}
+	}
+	// .contacts__title
+	&__title {
+		&:not(:last-child) {
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 25, 10);
+			}
+		}
+	}
+	// .contacts__street
+	&__street {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: math.div(29px, 24px) * 100%;
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 24, 16);
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 10);
+			}
+		}
+	}
+	// .contacts__btn
+	&__btn {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 140%;
+		color: $sk;
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		transition: all 0.3s ease 0s;
+		svg {
+			margin: 0px 0px 10px 0px;
+			fill: currentColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				margin-left: 5px;
+			}
+		}
+	}
+	// .contacts__time
+	&__time {
+		&:not(:last-child) {
+			margin: 0px 0px 25px 0px;
+		}
+		span {
+			display: block;
+			&:not(:last-child) {
+				margin: 0px 0px 7px 0px;
+			}
+		}
+	}
+	// .contacts__list
+	&__list {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 10);
+			}
+		}
+	}
+	// .contacts__item
+	&__item {
+		font-weight: 600;
+		line-height: 140%;
+		@include adaptiveValue("font-size", 24, 18, 768, 320, 1);
+		&:not(:last-child) {
+			margin: 0px 0px 7px 0px;
+		}
+	}
+	// .contacts__link
+	&__link {
+		display: block;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $sk;
+				margin-left: 5px;
+			}
+		}
+	}
+	// .contacts__chats
+	&__chats {
+		display: flex;
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 10);
+			}
+		}
+	}
+	// .contacts__vk-link
+	&__vk-link {
+		display: inline-flex;
+		align-items: center;
+		column-gap: 10px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 140%;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: $sk;
+			margin-left: 5px;
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 18, 14, 768, 320, 1);
+		}
+	}
+}
+.item-contacts {
+	font-size: 28px;
+	font-weight: 700;
+	padding: 10px;
+	color: $sk;
+	// .item-contacts__block
+	&__block {
+	}
+}

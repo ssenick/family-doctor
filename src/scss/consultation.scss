@@ -1,0 +1,88 @@
+.consultation {
+	text-align: center;
+	// .consultation__container
+	&__container {
+	}
+	// .consultation__header
+	&__header {
+		.header-block__dect {
+			@include adaptiveValue("font-size", 28, 24, 1920, 1024, 1);
+			@include adaptiveValue("font-size", 24, 16, 768, 320, 1);
+		}
+		&:not(:last-child) {
+			margin-bottom: 60px;
+			@media (max-width: $mobile) {
+				@include adaptiveValue("margin-bottom", 60, 30, 768, 320, 1);
+			}
+		}
+	}
+	// .consultation__items
+	&__items {
+		display: flex;
+		align-items: flex-start;
+		row-gap: 30px;
+		@include adaptiveValue("column-gap", 30, 39, 1920, 1024, 1);
+		@include adaptiveValue("column-gap", 39, 19, 1024, 768, 1);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 60, 1920, 1024, 1);
+		}
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			@media (max-width: $mobileSmall) {
+				@include adaptiveValue("margin-right", 0, 30, 480, 320, 1);
+				@include adaptiveValue("margin-left", 0, 30, 480, 320, 1);
+			}
+		}
+	}
+	// .consultation__item
+	&__item {
+		flex: 0 1 33.333%;
+		@media (max-width: $mobile) {
+			flex: 1 1 auto;
+		}
+	}
+	// .consultation__btn
+	&__btn {
+		max-width: 400px;
+		display: flex;
+		margin: 0px auto;
+		width: 100%;
+		@media (max-width:$mobile){
+			 min-height: 60px; 
+			 align-items: center;
+		}
+	}
+}
+
+.item-consultation {
+	text-align: center;
+	// .item-consultation__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(280, 410);
+		filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.05));
+		border-radius: 20px;
+		overflow: hidden;
+		min-height: 200px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	// .item-consultation__label
+	&__label {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: math.div(29px, 24px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20, 1024, 768, 1);
+		}
+		@include adaptiveValue("font-size", 24, 18, 1920, 768, 1);
+	}
+	// .item-consultation__descr
+	&__descr {
+		font-size: 18px;
+		line-height: math.div(22px, 18px) * 100%;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
