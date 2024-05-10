@@ -3,7 +3,7 @@
 DEMO: https://family-doctor.ssenick.fun/
 
 ## Description
-FAMILY-DOCTOR is a one-page website template designed to seamlessly integrate with WordPress. It offers a quick start for website development, leveraging Gulp and Webpack for task automation and module bundling, respectively.
+`FAMILY-DOCTOR is a one-page website template designed to seamlessly integrate with WordPress. It offers a quick start for website development, leveraging Gulp and Webpack for task automation and module bundling, respectively.`
 
 ## Technologies Used
 - **Gulp**: Task automation tool.
